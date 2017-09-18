@@ -23,7 +23,8 @@ console.log(listacompra);
 var infoUsu = [];
 infoUsu["nombre"]="juan";
 infoUsu["apellido"]="Garcia";
-infoUsu["estudios"]="BTX";
+infoUsu["estudios"]=[];
+
 var usuarios=[];
 usuarios[1]=infoUsu;
 
