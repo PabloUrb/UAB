@@ -9,6 +9,7 @@ angular.module('myApp', [])
                         $scope.guardar2 = "valor1";
                         $scope.guardar3 = "valor1";
                         $scope.buena = true;
+                        $scope.cheked=false;
                         $scope.clicaOpcion1 = function () {
 
                         switch ($scope.opcion1) {
@@ -82,12 +83,12 @@ angular.module('myApp', [])
 
 
                         };
+                        $scope.intentos=[];
+                        
                         $scope.onShowHide2 = function () {
-                        var intentos = [{
-                        $scope.opcion1,
-                                $scope.opcion2,
-                                $scope.opcion3}
-                        ];
+                        
+                        $scope.intentos.push([$scope.opcion1,$scope.opcion2,$scope.opcion3]);
+                        
                                 if ($scope.opcion1 === $scope.guardar1) {
                         $scope.opcion1 = "buena";
                         }
@@ -98,11 +99,21 @@ angular.module('myApp', [])
                         $scope.opcion3 = "buena";
                         }
                         if ($scope.opcion1 === "buena" && $scope.opcion2 === "buena" && $scope.opcion3 === "buena") {
-                        $scope.mostrarDatos = true;
+                        $scope.cheked=true;
+                                $scope.mostrarDatos = true;
                         } else {
                         $scope.mostrarDatos = false;
                         }
-
-                        }
-                ;
+                        };
+                        $scope.reboot = function(){
+                            $scope.opcion1 = "valor1";
+                        $scope.opcion2 = "valor1";
+                        $scope.opcion3 = "valor1";
+                        $scope.mostrarDatos = true;
+                        $scope.guardar1 = "valor1";
+                        $scope.guardar2 = "valor1";
+                        $scope.guardar3 = "valor1";
+                        $scope.buena = true;
+                        $scope.cheked=false;
+                        };
                 }]);

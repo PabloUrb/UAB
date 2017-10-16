@@ -50,15 +50,20 @@ and open the template in the editor.
                 <button class="boton" ng-if="mostrarDatos === true" ng-click="onShowHide(false)" >Acepta</button>
                 <button class="boton"ng-if="mostrarDatos === false" ng-click="onShowHide2(true)" >Validar</button>
                 <h2>intentos</h2>
-                <div ng-repeat="ultimos intentos">
-                    <div>{{intentos}}</div>
+                <section ng-repeat="intento in intentos track by $index">
+                    <div class="combinacion">
+                    <div class="{{intento[0]}}"></div>
+                    <div class="{{intento[1]}}"></div>
+                    <div class="{{intento[2]}}"></div>
                 </div>
-                
+                </section>
                 <br><br><br>
                 <h2>COMBINACIÓN GUARDADA</h2>
                 <div class="{{guardar1}}"></div>
                 <div class="{{guardar2}}"></div>
                 <div class="{{guardar3}}"></div>
+                <h1 ng-show="cheked">Felicidades!!!</h1>
+                <button ng-show="cheked" ng-click="reboot()">Otra partidita?</button>
             </div>
         </article>
     </body>
