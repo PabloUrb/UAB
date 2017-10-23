@@ -114,6 +114,7 @@ angular.module('myApp', [])
                         $scope.guardar2 = "valor1";
                         $scope.guardar3 = "valor1";
                         $scope.buena = true;
+                        $scope.intentos=[];
                         $scope.cheked=false;
                         };
                 }]);
