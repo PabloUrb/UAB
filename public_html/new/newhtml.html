@@ -15,12 +15,13 @@ and open the template in the editor.
 
         <div>ALTA COCHE </div>
         <form name="FormalaltaCoche">
-<input type="text" placeholder="Nom" name="nom"/>
-<input type="text" placeholder="Preu" name="preu"/>
-<input onclick="altaCoche();" type="button" value="Añadir" />
+            <input type="text" name="nom" placeholder="Nom" id="nom" />
+            <input type="text" name="preu" placeholder="Preu" id="preu" />
+            <input onclick="altaCoche()" type="button" value="Añadir" />
         </form>
         <div id="listaCoches">
             <h1>Listado coches</h1>
+            <input onclick="borrarCoche()" type="button" value="Borrar" />
         </div>
     </body>
 </html>

@@ -200,8 +200,9 @@ document.write(""+coche4.getExtra(2) + "<br>");
 document.write(""+coche4.getExtra(3) + "</th><br>" + "</table>");
 /*ALTA DE COCHES*/
 function altaCoche() {
-    var nom = document.forms["altaCoche"]["nom"].value;
-    var preu = document.forms["altaCoche"]["preu"].value;
+    
+    var nom = document.forms["FormalaltaCoche"]["nom"].value;
+    var preu = document.forms["FormalaltaCoche"]["preu"].value;
     var coche = new Coche();
     coche.nombre = nom;
     coche.precio = preu;
@@ -209,7 +210,12 @@ function altaCoche() {
     document.getElementById("listaCoches").innerHTML += "NOMBRE: " + coche.nombre + " <br/>";
     document.getElementById("listaCoches").innerHTML += "Precio: " + coche.precio + "<br/>";
 //document.write("Nombre: "+coche.nombre+"<br />");
-//document.write("Nombre: "+coche.precio+"<br />");
+//document.write("Precio: "+coche.precio+"<br />");
+}
+function borrarCoche(){
+
+    document.getElementById("listaCoches").array.pop(coche.nombre);
+    document.getElementById("listaCoches").array.pop(coche.precio);
 }
 
 

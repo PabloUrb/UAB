@@ -35,5 +35,28 @@ function añadir_primero(){
     mostraArray();
 }
 function borrar_ultimo(){
+    lista_numeros.pop();
+    mostraArray();
+}
+function borrar_primero(){
+    lista_numeros.shift();
+    mostraArray();
+}
+function borrar_pos(){
+    var numeropos = window.prompt("Indica la pos");
+    lista_numeros.splice(numeropos,1);
+    mostraArray();
+}
+function borrar_num_concreto(){
+    var numeropos = window.prompt("Indica la num");
+    for(k=0;k<lista_numeros.length;k++){
+        if(lista_numeros[k]==numeropos){
+            lista_numeros.splice(k,1);
+        }
+    } 
+    mostraArray();
+}
+function calcular(){
     
 }
+    
