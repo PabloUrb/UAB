@@ -20,11 +20,22 @@ and open the template in the editor.
     </head>
     <body ng-app="myApp">
         <div ng-controller="MuestraPeliculas">
-            <table>
+            <table class="table table-condensed">
+                <thead>
+                    <tr>
+                        <th>Director</th>
+                        <th>Nombre</th>
+                        <th>Año</th>
+                        <th>Nacionalidad</th>
+                    </tr>
+                </thead>
+                <tbody>
+  
                 <tr ng-repeat="actor in actoresControler track by $index">
                     <td>{{actor[0]}}</td>
                     <td>{{actor[1]}}</td>
                 </tr>
+                </tbody>
             </table>
             <div>
                 <select ng-model="numPeli">
@@ -47,16 +58,17 @@ and open the template in the editor.
             <table class="table table-condensed">
                 <thead>
                     <tr>
-                        <th></th>
+                        <th>Director</th>
+                        <th>Nombre</th>
+                        <th>Año</th>
                     </tr>
                 </thead>
                 <tbody>
-                    
-                </tbody>
-                <tr ng-repeat="actor in peliculasControler[numPeli][0]track by $index">
+                    <tr ng-repeat="actor in peliculasControler[numPeli][0]track by $index">
                     <td>{{actor[0]}}</td>
                     <td>{{actor[1]}}</td>
                 </tr>
+                </tbody>
             </table>
         </div>
     </body>
