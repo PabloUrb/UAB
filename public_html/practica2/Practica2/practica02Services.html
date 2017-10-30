@@ -23,18 +23,19 @@ and open the template in the editor.
             <table class="table table-condensed">
                 <thead>
                     <tr>
-                        <th>Director</th>
                         <th>Nombre</th>
+                        <th>Apellido</th>
                         <th>Año</th>
                         <th>Nacionalidad</th>
                     </tr>
                 </thead>
                 <tbody>
-  
-                <tr ng-repeat="actor in actoresControler track by $index">
-                    <td>{{actor[0]}}</td>
-                    <td>{{actor[1]}}</td>
-                </tr>
+                    <tr ng-repeat="actor in actoresControler track by $index">
+                        <td>{{actor[0]}}</td>
+                        <td>{{actor[1]}}</td>
+                        <td>{{actor[2]}}</td>
+                        <td>{{actor[3]}}</td>
+                    </tr>
                 </tbody>
             </table>
             <div>
@@ -42,34 +43,27 @@ and open the template in the editor.
                     <option ng-repeat="peli in peliculasControler track by $index" value="{{$index}}">
                         {{peli[1]}}
                     </option>
-                </select>
-                {{peliculasControler[numPeli]}}
+                </select> 
             </div>
             <div>
-                Director: {{peliculasControler[numPeli][2]}}
-                Nombre: {{peliculasControler[numPeli][1]}}
-                Año: {{peliculasControler[numPeli][3]}}
+                <table class="table table-condensed">
+                    <thead>
+                        <tr>
+                            <th>Director</th>
+                            <th>Nombre</th>
+                            <th>Año</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="actor in peliculasControler[numPeli][0] track by $index "value="{{index}}">
+                            <td>{{actor[0]}}</td>
+                            <td>{{actor[1]}}</td>
+                            <td>{{actor[2]}}</td>
+                            <td>{{actor[3]}}</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
-            <table >
-                <tr ng-repeat="actor in peliculaControler track by $index">
-                    <td>{{actor[0]}}</td>
-                </tr>
-            </table>
-            <table class="table table-condensed">
-                <thead>
-                    <tr>
-                        <th>Director</th>
-                        <th>Nombre</th>
-                        <th>Año</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr ng-repeat="actor in peliculasControler[numPeli][0]track by $index">
-                    <td>{{actor[0]}}</td>
-                    <td>{{actor[1]}}</td>
-                </tr>
-                </tbody>
-            </table>
         </div>
     </body>
 </html>
