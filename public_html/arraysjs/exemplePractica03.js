@@ -16,7 +16,7 @@ function mostraArray() {
 function primero_ultimo() {
     var info = document.getElementById("infoArray2");
     for (k = 0; k < lista_numeros.length; k++) {
-        if (k == 0 || k == 4) {
+        if (k === 0 || k === 4) {
             info.innerHTML += "<div>" + lista_numeros[k] + "</div>";
         }
     }
@@ -44,6 +44,7 @@ function borrar_primero() {
 }
 function borrar_pos() {
     var numeropos = window.prompt("Indica la pos");
+    numeropos-=1;
     lista_numeros.splice(numeropos, 1);
     mostraArray();
 }
@@ -58,16 +59,30 @@ function borrar_num_concreto() {
 }
 function calcular() {
     var numeropos = window.prompt("*, + , / , -");
-    if(numeropos=="+"){
-        
-    }else if(numeropos=="*"){
-            
-    }else if(numeropos=="-"){
-        
-    }else if(numeropos=="/"){
-        
-    }else{
-        
+    var info = document.getElementById("infoArray3");
+    var aux = 1;
+    if (numeropos === "+") {
+        for (k = 0; k < lista_numeros.length; k++) {          
+            aux += lista_numeros[k];
+        }
+        info.innerHTML += "<div>" + aux + "</div>";
+    } else if (numeropos === "*") {
+        for (k = 0; k < lista_numeros.length; k++) {           
+            aux *= lista_numeros[k];
+        }
+        info.innerHTML += "<div>" + aux + "</div>";
+    } else if (numeropos === "-") {
+        for (k = 0; k < lista_numeros.length; k++) {        
+            aux -= lista_numeros[k];
+        }
+        info.innerHTML += "<div>" + aux + "</div>";
+    } else if (numeropos === "/") {
+        for (k = 0; k < lista_numeros.length; k++) {
+            aux /= lista_numeros[k];
+        }
+        info.innerHTML += "<div>" + aux + "</div>";
+    } else {
+
     }
 }
     
