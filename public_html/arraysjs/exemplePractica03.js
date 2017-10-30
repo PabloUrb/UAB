@@ -51,7 +51,7 @@ function borrar_pos() {
 function borrar_num_concreto() {
     var numeropos = window.prompt("Indica la num");
     for (k = 0; k < lista_numeros.length; k++) {
-        if (lista_numeros[k] == numeropos) {
+        if (lista_numeros[k] === numeropos) {
             lista_numeros.splice(k, 1);
         }
     }
